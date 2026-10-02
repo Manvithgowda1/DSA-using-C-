@@ -6,10 +6,12 @@ public:
         for(auto x:nums){
             m[x]++;
         }
+        
         vector<pair<int,int>> s(m.begin(),m.end());
         sort(s.begin(),s.end(),[](auto &a,auto &b){
             return a.second>b.second;
         });
+        
         int maxFreq = s[0].second;
         auto it=s.begin();
         while(it!=s.end()){
